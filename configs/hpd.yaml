@@ -1,0 +1,21 @@
+# One file per department: change this file, not the code.
+agency: HPD
+db: data/311.db
+weather_csv: data/nyc_weather.csv
+train_start: "2023-01-01"
+groups:
+  heat: ["HEAT/HOT WATER"]
+weather_groups: [heat]        # groups that are forecast using weather
+gap_days:                     # days with broken data (kept out of training)
+  - "2024-04-11"
+  - "2024-04-12"
+  - "2024-04-13"
+  - "2024-04-14"
+  - "2024-04-15"
+  - "2024-07-11"
+  - "2024-07-12"
+  - "2024-07-13"
+  - "2024-07-14"
+capacity_per_inspector: 40    # effort units one inspector can handle per day (assumption)
+buffer: 0.10                  # fixed fallback margin
+service_level: 0.90           # we want enough inspectors on 90% of days (margin learned from past errors)

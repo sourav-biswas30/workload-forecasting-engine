@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+ortools
+pyyaml
+matplotlib
+requests
+pytest
+ipykernel
+streamlit
